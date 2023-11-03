@@ -36,11 +36,19 @@ body{
   background-color: var(--backColor);
 }
 
-#nav-bar a{
+/* #nav-bar a{
+  font-weight:bold;
+  padding: 10px;
+  font-size: large;
+} */
+
+.nav a{
+  color: black !important;
   font-weight:bold;
   padding: 10px;
   font-size: large;
 }
+
 
 /* hero banner */
 #hero-banner{
