@@ -21,7 +21,7 @@ body{
     "footer";
 }
 
-/* main logo & nav */
+/* Navigation */
 #logo-nav{
   grid-area: logo-nav;
   display: flex;
