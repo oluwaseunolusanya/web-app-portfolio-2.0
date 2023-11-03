@@ -9,8 +9,8 @@ body{
   padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  display: grid;
-  grid-template-columns: auto;
+  /* display: grid; */
+  /* grid-template-columns: auto;
   grid-template-rows: 10% 15% 15% 45% 10% 5% ;
   grid-template-areas:
     "logo-nav"
@@ -18,54 +18,39 @@ body{
     "about"
     "work"
     "contact"
-    "footer";
+    "footer"; */
 }
 
 /* Navigation */
-#logo-nav{
-  grid-area: logo-nav;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #logo, #subtitle h2{
-  border: 1px solid;
+  border: 1px none;
+  border-radius: 5px;
   padding: 5px 10px;
   color: var(--textColor);
   background-color: var(--backColor);
 }
 
-/* #nav-bar a{
-  font-weight:bold;
-  padding: 10px;
-  font-size: large;
-} */
-
 .nav a{
   color: black !important;
   font-weight:bold;
-  padding: 10px;
+  padding: 20px;
+  margin-left:40px;
   font-size: large;
 }
 
 
-/* hero banner */
-#hero-banner{
-  grid-area: hero-banner; 
-  display: flex;
-  justify-content: end;
-  align-items: end;
+/* Hero */
+.hero-banner{
+  height:200px;
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
+  padding:20px;
 }
 
 #subtitle{
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-
+  width: fit-content;
 }
+
 
 /* about me */
 #about{
