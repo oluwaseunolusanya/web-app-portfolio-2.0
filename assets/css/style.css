@@ -45,12 +45,14 @@ body{
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   padding:20px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 #subtitle{
   width: fit-content;
 }
-
 
 /* about me */
 #about{
