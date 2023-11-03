@@ -1,0 +1,270 @@
+/* CSS Variables for Colour Themes */
+:root{
+  --backColor: rgb(123, 118, 118);
+  --textColor: white;
+}
+
+body{
+  margin: auto;
+  padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% 15% 15% 45% 10% 5% ;
+  grid-template-areas:
+    "logo-nav"
+    "hero-banner"
+    "about"
+    "work"
+    "contact"
+    "footer";
+}
+
+/* main logo & nav */
+#logo-nav{
+  grid-area: logo-nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo, #subtitle h2{
+  border: 1px solid;
+  padding: 5px 10px;
+  color: var(--textColor);
+  background-color: var(--backColor);
+}
+
+#nav-bar a{
+  font-weight:bold;
+  padding: 10px;
+  font-size: large;
+}
+
+/* hero banner */
+#hero-banner{
+  grid-area: hero-banner; 
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+}
+
+#subtitle{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+}
+
+/* about me */
+#about{
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "about-heading about-content about-image";
+  /* border:1px solid; */
+  padding-right:100px;
+ 
+}
+
+#about-heading{
+  grid-area: about-heading;
+  text-align: right; 
+  border-right: 4px solid;
+  padding-right: 20px;
+  height: auto;
+}
+
+#about-content{
+  grid-area: about-content;
+  text-align: justify;
+  padding: 0 20px;
+  height: auto;
+} 
+
+#about-image{
+  grid-area: about-image;
+  background-image: url("../images/profile-photo.jpg");
+  background-size:100% 100%;
+  height:90%;
+  margin-top: 10px;
+  border-radius: 30px;
+  size: auto;
+}
+
+/* portfolio */
+#work{
+  grid-area: work;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "work-heading app-container";
+  padding-right:100px;
+}
+
+#work-heading{
+  grid-area: work-heading;
+  text-align: right; 
+  border-right: 4px solid;
+  padding-right: 20px;
+  height: auto;
+  color: var()
+}
+
+#app-container{
+  grid-area: app-container;
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "app-1 app-1"
+    "app-1 app-1"
+    "app-2 app-3"
+    "app-4 app-5";
+  padding-left:20px;
+  margin: 20px 0px;
+  gap:10px;
+  padding-bottom: 30px;
+}
+
+.app-title{
+  padding: 0px 5px;
+  height:auto;
+  color: var(--textColor);
+  background-color: var(--backColor);
+  width: fit-content;
+}
+
+.app-title h4{
+  margin-bottom: -20px;
+  margin-top:5px;
+}
+
+.app-title p{
+  font-style: italic;
+}
+
+.app{
+  display: block;
+}
+
+#app-1{
+  grid-area: app-1;
+  border: 4px solid var(--backColor);
+  background-image: url("../images/near-miss.png");
+
+}
+
+#app-2{
+  grid-area: app-2;
+  border: 4px solid var(--backColor);
+  background-image: url("../images/seo-horiseon.png");
+}
+
+#app-3{
+  grid-area: app-3;
+  border: 4px solid var(--backColor);
+  background-image: url("../images/placeholder.png");
+  background-size: cover;
+}
+
+#app-4{
+  grid-area: app-4;
+  border: 4px solid var(--backColor);
+  background-image: url("../images/placeholder.png");
+  background-size: cover;
+
+}
+
+#app-5{
+  grid-area: app-5;
+  border: 4px solid var(--backColor);
+  background-image: url("../images/placeholder.png");
+  background-size: cover;
+}
+
+/* contact */
+#contact{
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "contact-heading contact-content";
+  /* border: 1px solid; */
+  padding-right:100px;
+}
+
+#contact-heading{
+  grid-area: contact-heading;
+  text-align: right; 
+  border-right: 4px solid;
+  padding-right: 20px;
+  height: auto;
+}
+
+#contact-content{
+  grid-area: contact-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  height: auto;
+  font-weight: bold;
+}
+
+/* footer */
+#footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media only screen and (max-width: 768px){
+  #app-container{
+    grid-area: app-container;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      "app-1 "
+      "app-1"
+      "app-1"
+      "app-1"
+      "app-2"
+      "app-3"
+      "app-4"
+      "app-5";
+    padding-left:20px;
+    margin: 20px 0px;
+    gap:10px;
+    padding-bottom: 30px;
+  }
+} */
+
+@media only screen and (max-width: 768px){
+  #app-container{
+    grid-area: app-container;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      "app-1 "
+      "app-1"
+      "app-1"
+      "app-1"
+      "app-2"
+      "app-3"
+      "app-4"
+      "app-5";
+    padding-left:20px;
+    margin: 20px 0px;
+    gap:10px;
+    padding-bottom: 30px;
+  }
+}
