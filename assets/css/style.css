@@ -50,6 +50,10 @@ body{
 }
 
 /* About */
+.about-section{
+  height: 200px;
+}
+
 #about-heading{
   text-align: right; 
   padding-right: 20px;
@@ -58,55 +62,56 @@ body{
 
 #about-content{
   text-align:justify;
-  height: 200px;
+  border-left: 4px solid;
+
 } 
 
 #about-content p{
-  padding: 0 20px;
-  border-left: 4px solid;
+  padding: 0 10px;
+  height: auto;
 }
 
 #about-image{
   background-image: url("../images/profile-photo.jpg");
   background-size:cover;
-  height:auto;
+  height: auto;
   border-radius: 30px;
 }
 
-/* portfolio */
+/* Work */
 #work{
-  grid-area: work;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "work-heading app-container";
-  padding-right:100px;
+  height: auto;
+  margin-top: 30px;
 }
 
 #work-heading{
   grid-area: work-heading;
   text-align: right; 
-  border-right: 4px solid;
   padding-right: 20px;
   height: auto;
-  color: var()
 }
 
 #app-container{
-  grid-area: app-container;
+  padding-left:20px;
+  gap:10px;
+  padding-bottom: 30px;
+  border-left: 4px solid;
   display: grid;
-  grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas:
     "app-1 app-1"
     "app-1 app-1"
     "app-2 app-3"
     "app-4 app-5";
-  padding-left:20px;
-  margin: 20px 0px;
-  gap:10px;
-  padding-bottom: 30px;
+}
+
+.app{
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  border: 4px solid var(--backColor);
+  background-size: cover;
 }
 
 .app-title{
@@ -118,7 +123,7 @@ body{
 }
 
 .app-title h4{
-  margin-bottom: -20px;
+  margin-bottom: -5px;
   margin-top:5px;
 }
 
@@ -126,43 +131,34 @@ body{
   font-style: italic;
 }
 
-.app{
-  display: block;
-}
-
 #app-1{
   grid-area: app-1;
-  border: 4px solid var(--backColor);
+  height: 360px;
   background-image: url("../images/near-miss.png");
-
 }
 
 #app-2{
   grid-area: app-2;
-  border: 4px solid var(--backColor);
+  height: 180px;
   background-image: url("../images/seo-horiseon.png");
 }
 
 #app-3{
   grid-area: app-3;
-  border: 4px solid var(--backColor);
+  height: 180px;
   background-image: url("../images/placeholder.png");
-  background-size: cover;
 }
 
 #app-4{
   grid-area: app-4;
-  border: 4px solid var(--backColor);
+  height: 180px;
   background-image: url("../images/placeholder.png");
-  background-size: cover;
-
 }
 
 #app-5{
   grid-area: app-5;
-  border: 4px solid var(--backColor);
+  height: 180px;
   background-image: url("../images/placeholder.png");
-  background-size: cover;
 }
 
 /* contact */
@@ -201,46 +197,4 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* @media only screen and (max-width: 768px){
-  #app-container{
-    grid-area: app-container;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-areas:
-      "app-1 "
-      "app-1"
-      "app-1"
-      "app-1"
-      "app-2"
-      "app-3"
-      "app-4"
-      "app-5";
-    padding-left:20px;
-    margin: 20px 0px;
-    gap:10px;
-    padding-bottom: 30px;
-  }
-} */
-
-@media only screen and (max-width: 768px){
-  #app-container{
-    grid-area: app-container;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-areas:
-      "app-1 "
-      "app-1"
-      "app-1"
-      "app-1"
-      "app-2"
-      "app-3"
-      "app-4"
-      "app-5";
-    padding-left:20px;
-    margin: 20px 0px;
-    gap:10px;
-    padding-bottom: 30px;
-  }
 }
