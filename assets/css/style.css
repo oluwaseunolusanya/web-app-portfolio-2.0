@@ -1,7 +1,7 @@
 /* CSS Variables for Colour Themes */
 :root{
-  --backColor: rgb(123, 118, 118);
-  --textColor: white;
+  --backColor: rgba(123, 118, 118,0.8);
+  --textColor: rgb(242, 236, 236);
 }
 
 body{
@@ -51,7 +51,7 @@ body{
 
 /* About */
 .about-section{
-  height: 200px;
+  height: auto;
 }
 
 #about-heading{
@@ -63,7 +63,6 @@ body{
 #about-content{
   text-align:justify;
   border-left: 4px solid;
-
 } 
 
 #about-content p{
@@ -85,7 +84,6 @@ body{
 }
 
 #work-heading{
-  grid-area: work-heading;
   text-align: right; 
   padding-right: 20px;
   height: auto;
@@ -109,7 +107,7 @@ body{
 .app{
   display: flex;
   justify-content: start;
-  align-items: end;
+  align-items:center;
   border: 4px solid var(--backColor);
   background-size: cover;
 }
@@ -120,6 +118,8 @@ body{
   color: var(--textColor);
   background-color: var(--backColor);
   width: fit-content;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .app-title h4{
@@ -129,6 +129,7 @@ body{
 
 .app-title p{
   font-style: italic;
+  margin-bottom: 0px;
 }
 
 #app-1{
@@ -146,7 +147,7 @@ body{
 #app-3{
   grid-area: app-3;
   height: 180px;
-  background-image: url("../images/placeholder.png");
+  background-image: url("../images/web-app-portfolio.png");
 }
 
 #app-4{
@@ -161,39 +162,29 @@ body{
   background-image: url("../images/placeholder.png");
 }
 
-/* contact */
-#contact{
-  grid-area: contact;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "contact-heading contact-content";
-  /* border: 1px solid; */
-  padding-right:100px;
-}
-
+/* Contact */
 #contact-heading{
-  grid-area: contact-heading;
-  text-align: right; 
-  border-right: 4px solid;
+  text-align: right;
   padding-right: 20px;
   height: auto;
 }
 
 #contact-content{
-  grid-area: contact-content;
+  border-left: 4px solid;
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  padding: 0 20px;
-  height: auto;
-  font-weight: bold;
+  align-items: center;
 }
 
-/* footer */
+#contact-content a{
+  color: black !important;
+  font-weight:bold;
+  padding: 20px;
+  font-size: large;
+}
+
+/* Footer */
 #footer{
-  grid-area: footer;
   display: flex;
   justify-content: center;
   align-items: center;
