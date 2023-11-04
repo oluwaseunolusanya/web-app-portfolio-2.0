@@ -117,19 +117,21 @@ body{
   height:auto;
   color: var(--textColor);
   background-color: var(--backColor);
-  width: fit-content;
+  width: auto;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.app-title h4{
+.app-title h5{
   margin-bottom: -5px;
   margin-top:5px;
+  width: auto;
 }
 
 .app-title p{
   font-style: italic;
   margin-bottom: 0px;
+  width: auto;
 }
 
 #app-1{
